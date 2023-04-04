@@ -9,6 +9,9 @@ public class RepetitionFixedApplication {
     public static void main(String[] args) {
         SpringApplication.run(RepetitionFixedApplication.class, args);
 
+       ForumUser user = new ForumUser("Marcin", "Chudy", 'M', 23, "Chujdy", 0, true);
+       user.getName();
+       user.getName2();
     }
 
 }
