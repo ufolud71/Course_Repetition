@@ -11,21 +11,24 @@ public class ArrayListCalculator {
     public void calculateArrayMean() {
 
         ArrayList<Integer> arrayList = new ArrayList<Integer>();
+        arrayList.add(4);
         arrayList.add(3);
-        arrayList.add(5);
+        arrayList.add(3);
         arrayList.add(4);
-        arrayList.add(4);
-        arrayList.add(5);
         arrayList.add(6);
-        arrayList.add(3);
+        arrayList.add(5);
+        arrayList.add(5);
         arrayList.add(2);
 
         int max = Collections.max(arrayList);
         int min = Collections.min(arrayList);
+        int proper = arrayList.size();
 
         for(int i = 0; i < arrayList.size();i++) {
             if(arrayList.get(i) == max || arrayList.get(i) == min) {
                 arrayList.remove(i);
+            }if(arrayList.size() ==  proper - 2){
+                break;
             }
         }
 
