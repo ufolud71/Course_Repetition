@@ -9,6 +9,8 @@ public class Letter {
     }
 
     Random randomGenerator = new Random();
+
+    //generating 50 Strings with random amount of characters and adding them to ArrayDeque
     public ArrayDeque generateLetters(){
         String a = "a";
         ArrayDeque<String> arrayOfLetters = new ArrayDeque<>();
@@ -25,7 +27,7 @@ public class Letter {
         }
         return arrayOfLetters;
     }
-
+    //Splitting elements of ArrayDeque into two ArrayLists based on their length
     public void sortArray(ArrayDeque<String> theQueue) {
         theQueue = generateLetters();
         ArrayList<String> even = new ArrayList<>();
@@ -37,6 +39,7 @@ public class Letter {
                 uneven.add(string);
             }
         }
+        //printing out contents of both Arraylists
         System.out.println("Contents of ArrayList with even numbers of characters:");
         for (String look: even) {
             System.out.println(look);
